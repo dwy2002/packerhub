@@ -55,6 +55,25 @@
         "VAR3=A'SingleQuote",
         "VAR4=A\"DoubleQuote"
       ]
-    }
+    },
+    {
+            "type": "powershell",
+            "inline": [
+                "Enable-WindowsOptionalFeature -Online -FeatureName IIS-WebServerRole",
+                "Enable-WindowsOptionalFeature -Online -FeatureName IIS-WebServer"
+            ]
+        },
+        {
+            "type": "windows-restart",
+            "restart_check_command": "powershell -command \"&amp; {Write-Output 'Machine restarted.'}\""
+        },
+        {
+            "type": "powershell",
+            "inline": [
+                "C:\\ProgramData\\Amazon\\EC2-Windows\\Launch\\Scripts\\InitializeInstance.ps1 -Schedule",
+                "C:\\ProgramData\\Amazon\\EC2-Windows\\Launch\\Scripts\\SysprepInstance.ps1 -NoShutdown"
+            ]
+        }
+    
   ]
 }
