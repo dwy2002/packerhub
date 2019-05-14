@@ -1,5 +1,3 @@
-/*
- 
 # USERDATA SCRIPT FOR AMAZON SOURCE WINDOWS SERVER AMIS
 # BOOTSTRAPS WINRM VIA SSL
  
@@ -27,5 +25,3 @@ cmd.exe /c netsh advfirewall firewall add rule name="WinRM-SSL (5986)" dir=in ac
 cmd.exe /c net stop winrm
 cmd.exe /c sc config winrm start= auto
 cmd.exe /c net start winrm
- 
-*/
