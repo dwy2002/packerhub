@@ -1,10 +1,9 @@
 {
     "variables": {
         "build_version": "{{isotime \"2006.01.02.150405\"}}",
-        "aws_profile": null,
+        "aws_profile": "default",
         "vpc_id": "vpc-0155ce7e3a51e3d1e",
-        "subnet_id": "subnet-07910103167f30679",
-        "security_group_id": null
+        "subnet_id": "subnet-07910103167f30679"
     },
     "builders": [
         {
