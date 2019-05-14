@@ -44,7 +44,7 @@
       ]
     },
     {
-    "type": "powershell",
+    "type": "windows-shell",
     "inline": ["dir c:\\"]
     },
     {
