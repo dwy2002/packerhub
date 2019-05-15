@@ -1,0 +1,11 @@
+#!/bin/bash
+# Install all pending updates to the system
+sudo yum -y update
+# Configure YUM to be able to access contributed Maven RPM packages
+sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+# Update the release version in the Maven repository configuration for this mainline release of Amazon Linux
+sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+# Install the Java 8 SDK, Git and Maven
+sudo yum -y install java-1.8.0-openjdk-devel git apache-maven
+# Set the default version of java to run out of the Java 8 SDK path
+# sudo update-alternatives --set java /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java
