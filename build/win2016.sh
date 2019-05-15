@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "start packer build"
-cd packerhub/packer.io/
+cd /packer.io/
 packer build firstrun.json
