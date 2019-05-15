@@ -9,3 +9,6 @@ sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
 sudo yum -y install java-1.8.0-openjdk-devel git apache-maven
 # Set the default version of java to run out of the Java 8 SDK path
 # sudo update-alternatives --set java /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java
+sudo wget https://releases.hashicorp.com/packer/1.2.5/packer_1.2.5_linux_amd64.zip
+sudo unzip packer_0.8.6_linux_amd64.zip
+sudo cp packer /usr/local/sbin/
