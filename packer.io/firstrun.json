@@ -26,10 +26,10 @@
         "owners": "amazon"
       },
       "run_tags" :{
-        "tag:Name": "packer",
-        "tag:owner": "packer",
-        "tag:Service": "packer",
-        "tag:Cost Center": "ETS"
+        "Name": "packer",
+        "owner": "packer",
+        "Service": "packer",
+        "Cost Center": "ETS"
       },
       "ami_name": "packer-demo-{{timestamp}}",
       "user_data_file": "./bootstrap_win.txt",
